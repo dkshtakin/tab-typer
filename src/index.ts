@@ -1,9 +1,18 @@
+import './style.css';
+import * as _ from 'lodash';
+
+import { TextEditor } from './text-editor.ts';
+
+import * as Automerge from "@automerge/automerge"
+let doc = Automerge.init()
+console.log(doc)
+
 document.addEventListener('DOMContentLoaded', event => {
     window.DEBUG = true
     const editor = new TextEditor('#editor', window.localforage)
 })
 
-const Helpers = {
+export const Helpers = {
     debounce (callback, time) {
         // Classic helper method: Prevent `callback` from executing more often than `time`.
         let timeout

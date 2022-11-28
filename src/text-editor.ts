@@ -1,4 +1,6 @@
-class TextEditor {
+import { Helpers } from './index.ts'
+
+export class TextEditor {
     constructor (editorId, db) {
         this.editor = document.querySelector(editorId)
         this.lastSave = document.querySelector('#last-save')
